@@ -119,21 +119,3 @@ If you have any questions, suggestions, or feedback, feel free to reach out at [
 
 ---
 
-## HTML and JavaScript for "Copy" Buttons (for GitHub Pages)
-
-To add "Copy" buttons to code blocks on GitHub Pages, you can use the following HTML and JavaScript snippet. 
-
-```html
-<div style="position: relative;">
-  <pre><code id="codeBlock"># Example code here...</code></pre>
-  <button onclick="copyToClipboard('codeBlock')" style="position: absolute; top: 0; right: 0; background-color: #007bff; color: white; border: none; padding: 5px; cursor: pointer;">Copy</button>
-</div>
-
-<script>
-function copyToClipboard(elementId) {
-    const text = document.getElementById(elementId).innerText;
-    navigator.clipboard.writeText(text).then(() => {
-        alert("Copied to clipboard!");
-    });
-}
-</script>
